@@ -3,7 +3,6 @@
     "name": "index",
     "path": "/",
     "component": "/app/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_2dfb1658"
+    "chunkName": "pages/index"
   }
 ]
