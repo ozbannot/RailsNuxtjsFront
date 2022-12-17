@@ -18,9 +18,13 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/en",
+    component: _2dfb1658,
+    name: "index___en"
+  }, {
     path: "/",
     component: _2dfb1658,
-    name: "index"
+    name: "index___ja"
   }],
 
   fallback: false
