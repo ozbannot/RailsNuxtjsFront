@@ -4,5 +4,41 @@
   },
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
+  },
+  "AppFooter": {
+    "description": "Auto imported from components/App/AppFooter.vue"
+  },
+  "HomeAbout": {
+    "description": "Auto imported from components/Home/HomeAbout.vue"
+  },
+  "HomeAppBar": {
+    "description": "Auto imported from components/Home/HomeAppBar.vue"
+  },
+  "HomeCompany": {
+    "description": "Auto imported from components/Home/HomeCompany.vue"
+  },
+  "HomeContact": {
+    "description": "Auto imported from components/Home/HomeContact.vue"
+  },
+  "HomePrice": {
+    "description": "Auto imported from components/Home/HomePrice.vue"
+  },
+  "HomeProducts": {
+    "description": "Auto imported from components/Home/HomeProducts.vue"
+  },
+  "WelcomeWelAbout": {
+    "description": "Auto imported from components/welcome/welAbout.vue"
+  },
+  "WelcomeWelAppBar": {
+    "description": "Auto imported from components/welcome/welAppBar.vue"
+  },
+  "WelcomeWelCompany": {
+    "description": "Auto imported from components/welcome/welCompany.vue"
+  },
+  "WelcomeWelContact": {
+    "description": "Auto imported from components/welcome/welContact.vue"
+  },
+  "WelcomeWelPrice": {
+    "description": "Auto imported from components/welcome/welPrice.vue"
   }
 }

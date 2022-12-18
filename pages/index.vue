@@ -1,133 +1,49 @@
 <template>
-  <v-container fluid>
-    <v-card
-      flat
-      tile
-      color="transparent"
-    >
-    <v-card-title>
-        nuxt-i18nの検証
-      </v-card-title>
-      <v-card-text>
-        <v-simple-table dense>
-          <template v-slot:default>
-            <thead>
-              <tr>
-                <th>en</th>
-                <th>ja</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="(path, i) in ['signup', 'login']"
-                :key="`path-${i}`"
-              >
-                <td>{{ path }}</td>
-                <td>{{ $t(`title.${path}`) }}</td>
-              </tr>
-            </tbody>
-          </template>
-        </v-simple-table>
-      </v-card-text>
-      <v-card-title>
-        Usersテーブルの取得
-      </v-card-title>
-      <v-card-text>
-        <v-simple-table dense>
-          <template
-            v-if="users.length"
-            v-slot:default
-          >
-            <thead>
-              <tr>
-                <th
-                  v-for="(key, i) in userKeys"
-                  :key="`key-${i}`"
-                >
-                  {{ key }}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="(user, i) in users"
-                :key="`user-${i}`"
-              >
-                <td>{{ user.id }}</td>
-                <td>{{ user.name }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ dateFormat(user.created_at) }}</td>
-              </tr>
-            </tbody>
-          </template>
-          <template v-else>
-            ユーザーが存在しません
-          </template>
-        </v-simple-table>
-      </v-card-text>
-      <v-card-title>
-        Vuetifyの導入（オリジナルカラーの確認）
-      </v-card-title>
-      <v-card-text>
-        <v-btn
-          v-for="(color, i) in colors"
-          :key="`color-${i}`"
-          :color="color"
-          class="mr-2"
+  <v-app>
+    <home-app-bar />
+    <v-sheet>
+      <v-container
+        fluid
+        :style="{ maxWidth: '1280px' }"
+      >
+        <v-row
+          v-for="(menu, i) in menus"
+          :key="`menu-${i}`"
         >
-          {{ color }}
-        </v-btn>
-      </v-card-text>
-    </v-card>
-    <v-card-title>
-            VuetifyカスタムCSSの検証
-          </v-card-title>
-          <v-card-text>
-            ipad（768px）とmobile（426px）で表示・非表示
-          </v-card-text>
-          <v-card-text>
-            <v-card
-              v-for="(cls, i) in customClass"
-              :key="`cls-${i}`"
-              :color="cls.color"
-              :class="cls.name"
-            >
-              <v-card-text>
-                {{ cls.des }}
-              </v-card-text>
-            </v-card>
-          </v-card-text>
-  </v-container>
+          <v-col cols="12">
+            <div :is="`home-${menu.title}`" />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-sheet>
+    <app-footer />
+  </v-app>
 </template>
 
 <script>
+import homeAbout from '~/components/home/HomeAbout'
+import homeProducts from '~/components/home/HomeProducts'
+import homePrice from '~/components/home/HomePrice'
+import homeContact from '~/components/home/HomeContact'
+import homeCompany from '~/components/home/HomeCompany'
+
 export default {
-  async asyncData ({ $axios }) {
-    let users = []
-    await $axios.$get('/api/v1/users').then(res => (users = res))
-    const userKeys = Object.keys(users[0] || {}) // 追加
-    return { users, userKeys }
+  components: {
+    homeAbout,
+    homeProducts,
+    homePrice,
+    homeContact,
+    homeCompany
   },
-  // data () 追加
   data () {
     return {
-      colors: ['primary', 'info', 'success', 'warning', 'error', 'background'],
-      customClass: [
-        { name: 'hidden-ipad-and-down', color: 'error', des: 'ipad未満で隠す' },
-        { name: 'hidden-ipad-and-up', color: 'info', des: 'ipad以上で隠す' },
-        { name: 'hidden-mobile-and-down', color: 'success', des: 'mobile未満で隠す' },
-        { name: 'hidden-mobile-and-up', color: 'warning', des: 'mobile以上で隠す' }
+      menus: [
+        { title: 'about', subtitle: 'このサイトはブログ"独学プログラマ"で公開されているチュートリアルのデモアプリケーションです' },
+        { title: 'products', subtitle: '他にはない優れた機能の数々' },
+        { title: 'price', subtitle: '会社の成長に合わせた3つのプラン' },
+        { title: 'contact', subtitle: 'お気軽にご連絡を' },
+        { title: 'company', subtitle: '私たちの会社' }
       ]
-    }
-  },
-  computed: {
-    dateFormat () {
-      return (date) => {
-        const dateTimeFormat = new Intl.DateTimeFormat(
-          'ja', { dateStyle: 'medium', timeStyle: 'short' }
-        )
-        return dateTimeFormat.format(new Date(date))
-      }
     }
   }
 }
