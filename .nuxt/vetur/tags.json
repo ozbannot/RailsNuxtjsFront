@@ -5,6 +5,15 @@
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
   },
+  "AppFooter": {
+    "description": "Auto imported from components/App/AppFooter.vue"
+  },
+  "AppLogo": {
+    "description": "Auto imported from components/App/AppLogo.vue"
+  },
+  "AppTitle": {
+    "description": "Auto imported from components/App/AppTitle.vue"
+  },
   "HomeAbout": {
     "description": "Auto imported from components/Home/HomeAbout.vue"
   },
@@ -22,12 +31,6 @@
   },
   "HomeProducts": {
     "description": "Auto imported from components/Home/HomeProducts.vue"
-  },
-  "AppFooter": {
-    "description": "Auto imported from components/App/AppFooter.vue"
-  },
-  "AppLogo": {
-    "description": "Auto imported from components/App/AppLogo.vue"
   },
   "WelcomeWelAbout": {
     "description": "Auto imported from components/welcome/welAbout.vue"

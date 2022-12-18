@@ -8,10 +8,11 @@ import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '../assets/sass/main.scss'
 
+import _e7669ade from '../layouts/before-login.vue'
 import _6f6c098b from '../layouts/default.vue'
 import _5cd7ceac from '../layouts/welcome.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b),"_welcome": sanitizeComponent(_5cd7ceac) }
+const layouts = { "_before-login": sanitizeComponent(_e7669ade),"_default": sanitizeComponent(_6f6c098b),"_welcome": sanitizeComponent(_5cd7ceac) }
 
 export default {
   render (h, props) {
