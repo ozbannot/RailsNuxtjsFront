@@ -1,6 +1,7 @@
 export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
 export { default as Tutorial } from '../../components/Tutorial.vue'
 export { default as AppFooter } from '../../components/App/AppFooter.vue'
+export { default as AppLogo } from '../../components/App/AppLogo.vue'
 export { default as HomeAbout } from '../../components/Home/HomeAbout.vue'
 export { default as HomeAppBar } from '../../components/Home/HomeAppBar.vue'
 export { default as HomeCompany } from '../../components/Home/HomeCompany.vue'

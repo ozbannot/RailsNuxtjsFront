@@ -9,7 +9,7 @@ export const nuxtOptions = {
   trailingSlash: undefined,
 }
 export const options = {
-  vueI18n: {"fallbackLocale":"ja","silentFallbackWarn":true,"messages":{"ja":{"title":{"signup":"会員登録","login":"ログイン"}},"en":{}}},
+  vueI18n: {"fallbackLocale":"ja","silentFallbackWarn":true,"messages":{"ja":{"menus":{"about":"サイトについて","products":"製品","price":"価格","contact":"お問合せ","company":"会社情報"},"title":{"signup":"会員登録","login":"ログイン"}},"en":{}}},
   vueI18nLoader: false,
   locales: ["ja","en"],
   defaultLocale: "ja",

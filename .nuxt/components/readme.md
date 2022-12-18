@@ -9,6 +9,7 @@ You can directly use them in pages and other components without the need to impo
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
 - `<AppFooter>` | `<app-footer>` (components/App/AppFooter.vue)
+- `<AppLogo>` | `<app-logo>` (components/App/AppLogo.vue)
 - `<HomeAbout>` | `<home-about>` (components/Home/HomeAbout.vue)
 - `<HomeAppBar>` | `<home-app-bar>` (components/Home/HomeAppBar.vue)
 - `<HomeCompany>` | `<home-company>` (components/Home/HomeCompany.vue)
