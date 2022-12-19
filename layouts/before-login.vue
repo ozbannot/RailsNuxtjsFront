@@ -1,8 +1,11 @@
 <template>
-  <div>
-    before-login.vue
-    <nuxt />
-  </div>
+  <v-app>
+    <before-login-app-bar />
+    <v-main>
+      <nuxt />
+    </v-main>
+    <app-footer />
+  </v-app>
 </template>
 
 <script>

@@ -9,5 +9,9 @@
   "title": {
     "signup":"会員登録",
     "login":"ログイン"
+  },
+  "pages": {
+    "signup": "会員登録",
+    "login": "ログイン"
   }
 }

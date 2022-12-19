@@ -59,7 +59,8 @@ export default {
           success: '44D69E',
           warning: 'FEB65E',
           error: 'FB8678',
-          background: 'f6f6f4'
+          background: 'f6f6f4',
+          myblue: '1867C0'
         }
       }
     }

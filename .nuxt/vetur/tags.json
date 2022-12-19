@@ -8,8 +8,14 @@
   "AppFooter": {
     "description": "Auto imported from components/App/AppFooter.vue"
   },
+  "AppLoginButton": {
+    "description": "Auto imported from components/App/AppLoginButton.vue"
+  },
   "AppLogo": {
     "description": "Auto imported from components/App/AppLogo.vue"
+  },
+  "AppSignupButton": {
+    "description": "Auto imported from components/App/AppSignupButton.vue"
   },
   "AppTitle": {
     "description": "Auto imported from components/App/AppTitle.vue"
@@ -31,6 +37,9 @@
   },
   "HomeProducts": {
     "description": "Auto imported from components/Home/HomeProducts.vue"
+  },
+  "BeforeLoginAppBar": {
+    "description": "Auto imported from components/BeforeLogin/BeforeLoginAppBar.vue"
   },
   "WelcomeWelAbout": {
     "description": "Auto imported from components/welcome/welAbout.vue"
